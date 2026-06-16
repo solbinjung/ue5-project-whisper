@@ -22,6 +22,8 @@ ATPSEnemy::ATPSEnemy()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
+
 	AssignDefaultSubobject(HealthBarWidget)->SetupAttachment(RootComponent);
 
 	HealthBarWidget->SetWidgetSpace(EWidgetSpace::Screen);
@@ -81,12 +83,12 @@ float ATPSEnemy::TakeDamage(float DamageAmount, struct FDamageEvent const& Damag
 
 		if (HitBoneNameStr.Contains(TEXT("head"), ESearchCase::IgnoreCase))
 		{
-			HeadshotMultiplier = 2.0f;
+			FinalDamage *= HeadshotMultiplier;
 		}
 		else if (HitBoneNameStr.EndsWith(TEXT("_l"), ESearchCase::IgnoreCase) ||
 			HitBoneNameStr.EndsWith(TEXT("_r"), ESearchCase::IgnoreCase))
 		{
-			LimbMultiplier = 0.5f;
+			FinalDamage *= LimbMultiplier;
 		}
 	}
 
