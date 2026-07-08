@@ -86,7 +86,7 @@ Content
 ### 상태 기반 AI
 
 <p align="center">
-<img src="Images/BehaviorTree.png" width="500" alt="AI 비헤이비어 트리 및 상태 전이 설계">
+<img src="Images/behaviorTree.png" width="500" alt="AI 비헤이비어 트리 및 상태 전이 설계">
 </p>
 
 * **Behavior Tree**와 **Blackboard**를 활용하여 탐색, 추격, 공격 상태를 관리했습니다.
