@@ -14,7 +14,7 @@
 #include "Engine/DamageEvents.h"
 #include "BrainComponent.h"
 
-#define DRAW_DEBUG
+//#define DRAW_DEBUG
 
 // Sets default values
 ATPSEnemy::ATPSEnemy()
