@@ -167,7 +167,6 @@ void ATPSEnemy::CheckNextCombo()
 
 * **결과**: Service와 Decorator를 통해 AI 상태를 실시간으로 판단하고, AnimNotify로 공격 종료 시점을 동기화하여 콤보 공격과 추격 상태가 자연스럽게 연결되는 AI 전투 흐름을 구현했습니다.
 
----
 
 ### 2. 무기 교체 시 왼손 IK 미동기화 문제 해결
 
